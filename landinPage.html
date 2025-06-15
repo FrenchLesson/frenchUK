@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>French Tutoring – Mickael</title>
+
+  <!-- Tailwind via CDN (quick prototyping) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Social preview / SEO -->
+  <meta property="og:title" content="French GCSE & KS2 Tutoring – Mickael">
+  <meta property="og:description" content="Year 10–11 speaking & listening booster, Year 6+ pathway to GCSE. Free trial. Cambridge or online.">
+  <meta property="og:image" content="assets/poster.png"><!-- optional -->
+  <meta name="description" content="GCSE & KS2 French lessons with Mickael – focus on speaking, listening, and long‑term success. Free trial. Cambridge & online.">
+
+  <style>
+    /* tiny tweak: smoother font rendering */
+    body { -webkit-font-smoothing: antialiased; }
+  </style>
+</head>
+
+<body class="bg-amber-50 text-slate-800 leading-relaxed">
+  <!-- Header -->
+  <header class="max-w-lg mx-auto p-6 text-center">
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+      French Tutoring with Mickael
+    </h1>
+    <p class="mt-2 text-lg">Cambridge UK (face‑to‑face) or Online</p>
+  </header>
+
+  <!-- Main content -->
+  <main class="max-w-lg mx-auto px-6 space-y-8">
+
+    <!-- GCSE section -->
+    <section class="flex items-start space-x-4">
+      <span class="text-red-500 text-2xl">🎯</span>
+      <div>
+        <h2 class="font-semibold text-lg">Year 10 & 11 – GCSE Focus</h2>
+        <ul class="list-disc list-inside text-base">
+          <li>Speaking & listening booster</li>
+          <li>Past‑paper practice & exam strategies</li>
+          <li>Build calm confidence for orals</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- KS2/KS3 long‑term section -->
+    <section class="flex items-start space-x-4">
+      <span class="text-green-600 text-2xl">🌱</span>
+      <div>
+        <h2 class="font-semibold text-lg">Year 6 + – KS2 ➜ GCSE Pathway</h2>
+        <ul class="list-disc list-inside text-base">
+          <li>Fun, structured lessons</li>
+          <li>Solid vocabulary & grammar foundations</li>
+          <li>Confident progression toward GCSE</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Offer / CTA -->
+    <section class="text-center">
+      <p class="font-bold text-xl">🎁 Free Trial Lesson Available</p>
+      <p class="text-slate-700 text-base mt-1">Book a no‑obligation session to see if my teaching style suits your child.</p>
+    </section>
+
+    <!-- QR + copy button -->
+    <section class="text-center space-y-4">
+      <img src="assets/mickael_qr.png" alt="Scan to add Mickael on WeChat"
+           class="mx-auto w-48 h-48 rounded-lg shadow-lg border border-slate-300">
+      <p class="text-sm text-slate-600">📱 Scan in WeChat or copy my ID below</p>
+
+      <button id="copyBtn"
+              class="inline-flex items-center px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-medium">
+        Copy WeChat ID
+      </button>
+      <span id="copiedMsg" class="ml-2 text-green-600 hidden">Copied!</span>
+    </section>
+
+    <!-- Chinese note -->
+    <section class="text-center text-sm text-slate-600 pt-4 border-t border-slate-300">
+      欢迎家长扫码或复制微信号咨询！提供免费试听课。
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 pb-6 text-center text-xs text-slate-500">
+    © 2025 Mickael | French Tutor | Cambridge, UK
+  </footer>
+
+  <!-- Copy‑to‑clipboard script -->
+  <script>
+    const wechatID   = "YOUR_WECHAT_ID";           // TODO: replace
+    const copyBtn    = document.getElementById("copyBtn");
+    const copiedMsg  = document.getElementById("copiedMsg");
+
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(wechatID);
+        copiedMsg.classList.remove("hidden");
+        setTimeout(() => copiedMsg.classList.add("hidden"), 2500);
+      } catch (err) {
+        alert("Unable to copy — please copy manually: " + wechatID);
+      }
+    });
+  </script>
+</body>
+</html>
