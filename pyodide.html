@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pyodide Demo</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+</head>
+<body>
+  <h1 id="greeting">Hello from HTML</h1>
+  <button onclick="runPython()">Run Python</button>
+
+  <script>
+    let pyodideReady = false;
+    let pyodide;
+
+    async function loadPyodideAndRun() {
+      pyodide = await loadPyodide();
+      pyodideReady = true;
+    }
+
+    async function runPython() {
+      if (!pyodideReady) {
+        alert("Pyodide not ready yet!");
+        return;
+      }
+
+      const response = await fetch("script.py");
+      const code = await response.text();
+      await pyodide.runPythonAsync(code);
+    }
+
+    loadPyodideAndRun();
+  </script>
+</body>
+</html>
