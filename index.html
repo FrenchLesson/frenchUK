@@ -21,6 +21,16 @@
 </head>
 
 <body class="bg-amber-50 text-slate-800 leading-relaxed">
+
+  <nav class="bg-white shadow mb-8">
+  <div class="max-w-lg mx-auto flex justify-around py-4 text-sm sm:text-base font-medium text-slate-700">
+    <a href="index.html" class="hover:text-blue-600">Home</a>
+    <a href="curriculum.html" class="hover:text-blue-600">Curriculum</a>
+    <a href="gcse.html" class="hover:text-blue-600">GCSE French</a>
+    <a href="contact.html" class="hover:text-blue-600">Contact</a>
+  </div>
+</nav>
+
   <!-- Header -->
   <header class="max-w-lg mx-auto p-6 text-center">
     <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
@@ -64,19 +74,7 @@
       <p class="text-slate-700 text-base mt-1">Book a no‑obligation session to see if my teaching style suits your child.</p>
     </section>
 
-    <!-- QR + copy button -->
-    <!-- <section class="text-center space-y-4">
-      <img src="assets/mickael_qr.png" alt="Scan to add Mickael on WeChat"
-           class="mx-auto w-48 h-48 rounded-lg shadow-lg border border-slate-300">
-      <p class="text-sm text-slate-600">📱 Scan in WeChat or copy my ID below</p>
-
-      <button id="copyBtn"
-              class="inline-flex items-center px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-medium">
-        Copy WeChat ID
-      </button>
-      <span id="copiedMsg" class="ml-2 text-green-600 hidden">Copied!</span>
-    </section> -->
-
+    
     <!-- Chinese note -->
     <section class="text-center text-sm text-slate-600 pt-4 border-t border-slate-300">
       欢迎家长扫码或复制微信号咨询！提供免费试听课。
@@ -88,21 +86,6 @@
     © 2025 Mickael | French Tutor | Cambridge, UK
   </footer>
 
-  <!-- Copy‑to‑clipboard script -->
-  <!-- <script>
-    const wechatID   = "YOUR_WECHAT_ID";           // TODO: replace
-    const copyBtn    = document.getElementById("copyBtn");
-    const copiedMsg  = document.getElementById("copiedMsg");
 
-    copyBtn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(wechatID);
-        copiedMsg.classList.remove("hidden");
-        setTimeout(() => copiedMsg.classList.add("hidden"), 2500);
-      } catch (err) {
-        alert("Unable to copy — please copy manually: " + wechatID);
-      }
-    });
-  </script> -->
 </body>
 </html>
